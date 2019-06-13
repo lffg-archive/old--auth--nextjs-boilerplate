@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "@lffg/nextjs-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .jsx,.js,.ts,.tsx",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "express": "^4.17.1",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/next": "^8.0.5",
+    "@types/node": "^12.0.7",
+    "@types/styled-components": "^4.1.16",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-styled-components": "^1.10.0",
+    "eslint": "^5.16.0",
+    "eslint-config-lffg": "1.4.0",
+    "typescript": "^3.5.1"
+  }
+}
