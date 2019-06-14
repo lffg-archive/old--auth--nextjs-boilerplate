@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .jsx,.js,.ts,.tsx",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "check-ts": "tsc --noEmit --skipLibCheck",
+    "check": "yarn lint && yarn check-ts"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -27,7 +29,20 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^5.16.0",
-    "eslint-config-lffg": "1.4.0",
+    "eslint-config-lffg": "1.5.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
     "typescript": "^3.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn check-ts"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "git add"
+    ]
   }
 }
