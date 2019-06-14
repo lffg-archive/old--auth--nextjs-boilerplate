@@ -1,6 +1,6 @@
-import theme from '~/config/theme'
+import theme from '~/config/theme';
 
-type ThemeInterface = typeof theme
+type ThemeInterface = typeof theme;
 
 declare module 'styled-components' {
   // eslint-disable-next-line import/prefer-default-export
